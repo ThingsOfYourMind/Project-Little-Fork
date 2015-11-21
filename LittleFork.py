@@ -204,7 +204,7 @@ def addCount(listN):
     a = len(listN)
     nameList = listN
     tempList = []
-    for i in range(a):
+    for i in range(a): #splits a single entry into two(name and playedTimes)
         name = nameList[i][0]
         count = nameList[i][1]
         count += 1
@@ -212,8 +212,7 @@ def addCount(listN):
         tempList.append(b)
     return (tempList)
 
-def combinelist(nowplay, notplay):
-    tempList = []
+def combinelist(nowplay, notplay,tempList = []):
     tempList.extend(nowplay)
     tempList.extend(notplay)
     return tempList
@@ -301,31 +300,6 @@ def prettyDisplay_list(listN):
 rounds, playersNum, maxPlayers = userinput()
 nameEntries = enterPlayers() # Line to manually enter names
 
-#nameEntries = (['Aaron', 2],['Daniela', 2],['dsgrh', 0],['Brannnn', 0], ['Looolla', 0], ['Brian', 0], ['Brian2', 0], ['Brian3', 0], ['AaronNA', 0],['Daniela2', 0],['Mdohwe', 0],['Foella', 0], ['SmomMo', 0], ['Bully', 0], ['Cowy', 0], ['Brfsn3', 0])
-#print(nameEntries)
-#nameEntries = sortNames(nameEntries)
-#print(nameEntries)
-#stats()
 
-#some error checking, make sure, values are between (0-2)
-#nameEntries = limitValue(nameEntries)
-
-#nowPlaying,notPlaying = playingList()
-#print("Now Playing:\n" + str(nowPlaying))
-#print("Waiting:\n" + str(notPlaying))
-
-#resets value to 0, for each of the playing
-#adds 1 to value, for each round missed
-#nowPlaying = resetCount(nowPlaying)
-#notPlaying = addCount(notPlaying)
-#print(nowPlaying)
-#print(notPlaying)
-
-#teamOne,teamTwo,nowPlaying = makeTeams(nowPlaying)
-#print("Team 1:\n" + str(teamOne))
-#print("Team 2:\n" + str(teamTwo))
-
-#combine lists again
-#nameEntries = combinelist(nowPlaying, notPlaying)
 
 startRounds(nameEntries)
